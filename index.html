@@ -55,7 +55,7 @@
                             </div>
 
                             <ul class="p-2">
-                                <li v-for="(contact, i) in contacts" :id="'contact' + i" class="list-unstyled d-flex align-items-center p-2">
+                                <li v-for="(contact, i) in contacts" :key="i" v-on:click="counter = i" :id="'contact' + i" class="list-unstyled d-flex align-items-center p-2">
 
                                     <img class="contact-image" :src="source + 'avatar' + contact.avatar +'.jpg'" :alt="contact.name">
 
@@ -66,7 +66,6 @@
                                         </div> 
                                         <div class="last-online text-muted">last online: </div>
                                     </div>
-
                                 </li>
                             </ul>
                         </div>
@@ -97,9 +96,8 @@
 
                                 <img src="./assets/img/mine.jpg" class="position-absolute messages-background" alt="">
     
-
                                 <div class="messages-wrapper d-flex flex-column" id="messages">
-                                    <p class="messages d-inline p-2 my-2 mx-4" v-for="(text, i) in contacts[counter].messages" :class="text.status">
+                                    <p class="messages d-inline p-2 my-2 mx-4" v-for="(text, i) in contacts[counter].messages" :key="i" :class="text.status">
                                         {{text.message}}
                                     </p>
                                 </div>

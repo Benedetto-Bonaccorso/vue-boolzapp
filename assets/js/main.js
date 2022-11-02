@@ -5,7 +5,7 @@ createApp({
   data() {
     return {
         source: "./assets/img/",
-        counter: 7,
+        counter: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -172,7 +172,7 @@ createApp({
     }
   }, 
   methods:{
-
+    
   }
 
 }).mount('#app')
