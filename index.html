@@ -98,8 +98,8 @@
                                 <img src="./assets/img/mine.jpg" class="position-absolute messages-background" alt="">
     
 
-                                <div class="messages-wrapper d-flex flex-column">
-                                    <p class="messages d-inline p-2 my-2 mx-4" v-for="(text, i) in contacts[0].messages" :class="text.status">
+                                <div class="messages-wrapper d-flex flex-column" id="messages">
+                                    <p class="messages d-inline p-2 my-2 mx-4" v-for="(text, i) in contacts[counter].messages" :class="text.status">
                                         {{text.message}}
                                     </p>
                                 </div>
