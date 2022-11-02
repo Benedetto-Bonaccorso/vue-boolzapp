@@ -1,10 +1,11 @@
 const { createApp } = Vue
 
 createApp({
+    
   data() {
     return {
         source: "./assets/img/",
-        counter: 2,
+        counter: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -175,3 +176,4 @@ createApp({
   }
 
 }).mount('#app')
+

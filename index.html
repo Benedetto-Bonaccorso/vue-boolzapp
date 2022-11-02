@@ -27,8 +27,9 @@
 
 
                             <div class="p-2 user d-flex justify-content-between">
-                                <div class="user-info">
+                                <div class="user-info d-flex align-items-center">
                                     <img src="./assets/img/avatar_io.jpg" alt="my avatar" class="contact-image my-2">
+                                    <p>Sofia</p>
                                 </div>
                                 <div class="user-options d-flex align-items-center">
 
@@ -74,20 +75,40 @@
 
                             <div class="upper-chat d-flex justify-content-between">
 
-                                <img :src="source + 'avatar' + contacts[counter].avatar +'.jpg'" class="contact-image m-3">
-                                
-                                <div class="upper-chat-options d-flex align-items-center">
-                                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
+                                <div class="contact-avatar-information d-flex align-items-center">
+                                    
+                                    <img :src="source + 'avatar' + contacts[counter].avatar +'.jpg'" class="contact-image m-3">
+                                    
+                                    <div class="contact-name-and-last-access">
+                                        <p class="m-1">{{contacts[counter].name}}</p>
+                                        <p class="text-muted m-1">Ultimo accesso: {{contacts[counter].messages[0].date}}</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="upper-chat-options d-flex align-items-center mx-2">
+                                    <a class="mx-2 text-secondary" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                    <a class="mx-2 text-secondary" href="#"><i class="fa-solid fa-paperclip"></i></a>
+                                    <a class="mx-2 text-secondary" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                                 </div>
 
                             </div>
-                            <div class="main-chat">
+                            <div class="main-chat  position-relative">
+
+                                <img src="./assets/img/mine.jpg" class="position-absolute messages-background" alt="">
+    
+
+                                <div class="messages-wrapper d-flex flex-column">
+                                    <p class="messages d-inline p-2 my-2 mx-4" v-for="(text, i) in contacts[0].messages" :class="text.status">
+                                        {{text.message}}
+                                    </p>
+                                </div>
 
                             </div>
-                            <div class="lower-chat">
-
+                            <div class="lower-chat d-flex align-items-center">
+                                <i class="fa-regular fa-face-smile mx-3"></i>
+                                <input type="text" class="message-input">
+                                <i class="fa-solid fa-microphone mx-3"></i>
                             </div>
                         </div>
 

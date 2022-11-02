@@ -76,7 +76,8 @@ body{
 
 }
 
-.user-options>a>i{
+.user-options>a>i,
+.upper-chat-options>a>i{
     font-size: larger;
 }
 
@@ -91,16 +92,39 @@ body{
 }
 
 .upper-chat{
-
     height: 5rem;
 }
 
 .main-chat{
-    background-color: aquamarine;
     height: calc(100% - 10rem);
 }
 
 .lower-chat{
-    background-color: #128C7E;
+    background-color: whitesmoke;
     height: 5rem;
+}
+
+.messages{
+    border-radius: 10px;
+    z-index: 2;
+    width: fit-content;
+}
+
+.messages-background{
+    width: 100%;
+    z-index: 0;
+}
+
+.sent{
+    background-color: #25d366;
+    align-self: flex-end;
+}
+
+.received{
+    background-color: aliceblue;
+}
+
+.message-input{
+    height: 40%;
+    width: 100%;
 }
