@@ -122,6 +122,10 @@ body{
     
 }
 
+.font-small{
+    font-size: smaller;
+}
+
 .sent{
     background-color: #25d366;
     align-self: flex-end;

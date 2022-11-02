@@ -174,14 +174,29 @@ createApp({
   }, 
   methods:{
     sendMessage(){
+
+        let currentTime = String(new Date().getDay()) + "/" + String(new Date().getMonth()) + "/" + String(new Date().getFullYear()) + " " + String(new Date().getHours()) + ":" + String(new Date().getMinutes()) + ":" + String(new Date().getSeconds())
+
+        let standardAnswer = "YAAAAAS QUEEEEEEEN"
+
+        if(this.newMessage.length > 0){
         this.contacts[this.counter].messages.push({
-            date: "casasa",
+            date: currentTime,
             message: this.newMessage,
             status: "sent"
         })
-        console.log(this.newMessage)
-        console.log(this.contacts[this.counter].messages)
-    }
+
+        this.newMessage = ""
+
+        this.contacts[this.counter].messages.push(
+            {
+            date: currentTime,
+            message: standardAnswer,
+            status: "received"
+                    }
+                )
+            }
+    },
   }
 
 }).mount('#app')
