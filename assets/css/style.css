@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.contact-image{
+    width: 3rem;
+    border-radius: 50px;
+}
+
+.messaging{
+    width: 15rem;
+    background-image: url("./assets/img/mine.jpg");
+}
