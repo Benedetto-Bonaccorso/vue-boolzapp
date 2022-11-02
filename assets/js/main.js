@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
         source: "./assets/img/",
+        counter: 2,
         contacts: [
             {
                 name: 'Michele',

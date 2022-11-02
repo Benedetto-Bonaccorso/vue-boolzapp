@@ -10,27 +10,89 @@
     integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
     <script src="https://kit.fontawesome.com/72c428df3e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body >
 
-    <div id="app">
+    <div id="app" v-cloak>
         <main>
-            <div class="appBody d-flex">
-                <ul class="contacts">
-                    <li v-for="(contact, i) in contacts" :id="'contact' + i" class="list-unstyled d-flex align-items-center">
-   
-                        <!-- AGGIUSTARE STA CACATA -->
-                        <img class="contact-image" :src="source + 'avatar' + contact.avatar +'.jpg'" :alt="contact.name">
-                        <img class="contact-image" :src="source + 'avatar' + contact.avatar + '_360' +'.jpg'" :alt="">
-                        <!-- AGGIUSTARE STA CACATA -->
+            <div class="background position-relative">
 
-                        <p class="contact-name">{{contact.name}}</p>
-                    </li>
-                </ul>
-
-                <div class="messaging">
+                <div class="green-band">
 
                 </div>
 
+                <div class="app-wrapper w-75 position-absolute container-fluid">
+                    <div class="row text-start">
+
+                        <div class="contacts p-0 col-4">
+
+
+                            <div class="p-2 user d-flex justify-content-between">
+                                <div class="user-info">
+                                    <img src="./assets/img/avatar_io.jpg" alt="my avatar" class="contact-image my-2">
+                                </div>
+                                <div class="user-options d-flex align-items-center">
+
+                                    <a class="mx-2 text-secondary"><i class="fa-solid fa-message"></i></a>
+                                    <a class="mx-2 text-secondary"><i class="fa-solid fa-circle-notch"></i></a>
+                                    <a class="mx-2 text-secondary"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="notifications p-2 m-0 d-flex align-items-center">
+                                <div class="bell-wrapper m-2 p-2">
+                                    <img class="bell-icon" src="./assets/img/bell-slash-solid.svg" alt="bell-icon">
+                                </div>
+
+                                <div class="notification-info">
+                                    <p>Ricevi notifiche di nuovi messaggi</p>
+                                    <a href="#" class="text-muted">Attiva Notifiche Desktop</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-search p-3">
+                                <input type="text" class="w-100 contact-searchbar" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+
+                            <ul class="p-2">
+                                <li v-for="(contact, i) in contacts" :id="'contact' + i" class="list-unstyled d-flex align-items-center p-2">
+
+                                    <img class="contact-image" :src="source + 'avatar' + contact.avatar +'.jpg'" :alt="contact.name">
+
+                                    <div class="contact-name">
+                                        <div class="fs-6 d-flex">
+                                            <div>{{contact.name}}</div> 
+                                            <div>12:00</div>
+                                        </div> 
+                                        <div class="last-online text-muted">last online: </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="messaging col-8 p-0">
+
+                            <div class="upper-chat d-flex justify-content-between">
+
+                                <img :src="source + 'avatar' + contacts[counter].avatar +'.jpg'" class="contact-image m-3">
+                                
+                                <div class="upper-chat-options d-flex align-items-center">
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                </div>
+
+                            </div>
+                            <div class="main-chat">
+
+                            </div>
+                            <div class="lower-chat">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </main>
