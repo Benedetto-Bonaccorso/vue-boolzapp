@@ -6,6 +6,7 @@ createApp({
     return {
         source: "./assets/img/",
         counter: 0,
+        newMessage: "",
         contacts: [
             {
                 name: 'Michele',
@@ -172,7 +173,15 @@ createApp({
     }
   }, 
   methods:{
-    
+    sendMessage(){
+        this.contacts[this.counter].messages.push({
+            date: "casasa",
+            message: this.newMessage,
+            status: "sent"
+        })
+        console.log(this.newMessage)
+        console.log(this.contacts[this.counter].messages)
+    }
   }
 
 }).mount('#app')

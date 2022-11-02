@@ -105,7 +105,10 @@
                             </div>
                             <div class="lower-chat d-flex align-items-center">
                                 <i class="fa-regular fa-face-smile mx-3"></i>
-                                <input type="text" class="message-input">
+                                <div class="message-input d-flex align-items-center">
+                                    <input type="text" class="message-input" v-model="newMessage">
+                                    <button v-on:click="sendMessage()"> asasa </button>
+                                </div>
                                 <i class="fa-solid fa-microphone mx-3"></i>
                             </div>
                         </div>
