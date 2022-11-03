@@ -76,9 +76,9 @@
                                     
                                     <img :src="source + 'avatar' + contacts[counter].avatar +'.jpg'" class="contact-image m-3">
                                     
-                                    <div class="contact-name-and-last-access position-relative">
+                                    <div class="contact-name-and-last-access">
                                         <p class="m-1">{{contacts[counter].name}}</p>
-                                        <p class="text-muted m-1">Lat online: {{contacts[counter].messages[contacts[counter].messages.length - 1].date.slice(-8,-3)}}</p>
+                                        <p class="text-muted m-1">Last online: {{contacts[counter].messages[contacts[counter].messages.length - 1].date.slice(-8,-3)}}</p>
                                     </div>
 
                                 </div>
@@ -95,9 +95,16 @@
                                 <!-- <img src="./assets/img/mine.jpg" alt=""> -->
 
                                 <div class="messages-wrapper d-flex flex-column" id="messages">
-                                    <div class="messages d-flex flex-column p-2 my-2 mx-4" v-for="(text, i) in contacts[counter].messages" :key="i" :class="text.status">
+                                    <div class="messages d-flex flex-column p-2 my-2 mx-4 position-relative" v-for="(text, i) in contacts[counter].messages" :key="i" :class="text.status">
                                         <p class="m-0">{{text.message}}</p>
                                         <p class="m-0 align-self-end text-muted font-small">{{text.date.slice(-8,-3)}}</p>
+                                        <div class="position-absolute scroll-down-menu" ><i class="fa-solid fa-chevron-down"></i>
+                                            <div class="message-options flex-column position-absolute">
+                                                <p v-on:click="messageInfo(i)">Message Info</p>
+                                                <p v-on:click="messageCancel(i)">Delete message</p>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
 

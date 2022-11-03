@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+[v-cloak]{
+    display: none;
+}
+
+body{
+
+}
+
+.background{
+    background-color: #ece5dd;
+    height: 100vh;
+}
+
+.green-band{
+    height: 15vh;
+    background-color: #128C7E;
+}
+
+.app-wrapper{
+    background-color: white;
+    min-width: 750px;
+    height: 90vh;
+    margin: auto;
+    top: 0;
+    bottom: 0;  
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.user{
+    height: 5rem;
+}
+
+.contacts{
+    overflow: scroll;
+    height: 90vh;
+}
+
+.contact-image{
+    width: 3rem;
+    border-radius: 50px;
+    margin-right: 1rem;
+}
+
+.notifications{
+    background-color: #34b7f1;
+}
+
+.bell-wrapper{
+    background-color: white;
+    width: fit-content;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+}
+
+.bell-icon{
+    width: 3rem;
+}
+
+.notification-info>a{
+    font-size: smaller;
+}
+
+.contact-searchbar{
+
+}
+
+.user-options>a>i,
+.upper-chat-options>a>i{
+    font-size: larger;
+}
+
+.messaging{
+    width: 100%;
+    height: 90vh;
+    border-left: 2px solid gainsboro;
+}
+
+.last-online{
+    font-size: x-small;
+}
+
+.upper-chat{
+    height: 5rem;
+}
+
+.main-chat{
+    height: calc(100% - 10rem);
+    background-color:bisque;
+    background-image: url("../img/mine.jpg");
+    overflow: scroll;
+}
+
+.lower-chat{
+    background-color: whitesmoke;
+    height: 5rem;
+}
+
+.messages{
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+.messages-background{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.messages-wrapper{
+    max-width: 100%;
+}
+
+.font-small{
+    font-size: smaller;
+}
+
+.sent{
+    background-color: #25d366;
+    align-self: flex-end;
+}
+
+.received{
+    background-color: aliceblue;
+}
+
+.received>.scroll-down-menu{
+    display: none;
+}
+
+.sent:not(:hover)>.scroll-down-menu{
+    display: none;
+}
+
+.scroll-down-menu{
+    right: 15px;
+}
+
+.scroll-down-menu>i{
+    color: white;
+    text-shadow: 2px 2px 1px black;
+}
+
+.scroll-down-menu:not(:hover)>.message-options{
+    display: none;
+}
+
+.message-options{
+    z-index: 3;
+    background-color: white;
+    right: 0;
+}
+
+.message-options>*{
+    text-decoration: none;
+    color: black;
+    padding: 0 0.5rem;
+}
+
+.message-input{
+    height: 60%;
+    width: 100%;
+}
