@@ -188,14 +188,16 @@ createApp({
 
         this.newMessage = ""
 
-        this.contacts[this.counter].messages.push(
-            {
-            date: currentTime,
-            message: standardAnswer,
-            status: "received"
+            setTimeout(() => {
+                this.contacts[this.counter].messages.push(
+                    {
+                        date: currentTime,
+                        message: standardAnswer,
+                        status: "received"
                     }
                 )
-            }
+            }, 1000);
+        }
     },
   }
 

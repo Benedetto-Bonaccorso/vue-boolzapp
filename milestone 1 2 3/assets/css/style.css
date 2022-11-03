@@ -88,7 +88,7 @@ body{
 }
 
 .last-online{
-    font-size: smaller;
+    font-size: x-small;
 }
 
 .upper-chat{
@@ -97,6 +97,8 @@ body{
 
 .main-chat{
     height: calc(100% - 10rem);
+    background-color:bisque;
+    background-image: url("../img/mine.jpg");
     overflow: scroll;
 }
 
@@ -109,7 +111,7 @@ body{
     border-radius: 10px;
     z-index: 2;
     width: fit-content;
-
+    max-width: 300px;
 }
 
 .messages-background{
@@ -119,7 +121,7 @@ body{
 }
 
 .messages-wrapper{
-    
+    max-width: 100%;
 }
 
 .font-small{

@@ -45,8 +45,8 @@
                                 </div>
 
                                 <div class="notification-info">
-                                    <p>Ricevi notifiche di nuovi messaggi</p>
-                                    <a href="#" class="text-muted">Attiva Notifiche Desktop</a>
+                                    <p>Receive new message notifications</p>
+                                    <a href="#" class="text-muted">Turn desktop notification on</a>
                                 </div>
                             </div>
 
@@ -77,7 +77,7 @@
                                     
                                     <div class="contact-name-and-last-access">
                                         <p class="m-1">{{contacts[counter].name}}</p>
-                                        <p class="text-muted m-1">Ultimo accesso: {{contacts[counter].messages[contacts[counter].messages.length - 1].date.slice(-8,-3)}}</p>
+                                        <p class="text-muted m-1">Lat online: {{contacts[counter].messages[contacts[counter].messages.length - 1].date.slice(-8,-3)}}</p>
                                     </div>
 
                                 </div>
@@ -89,10 +89,10 @@
                                 </div>
 
                             </div>
-                            <div class="main-chat  position-relative">
-
-                                <img src="./assets/img/mine.jpg" class="position-absolute messages-background" alt="">
+                            <div class="main-chat">
     
+                                <!-- <img src="./assets/img/mine.jpg" alt=""> -->
+
                                 <div class="messages-wrapper d-flex flex-column" id="messages">
                                     <div class="messages d-flex flex-column p-2 my-2 mx-4" v-for="(text, i) in contacts[counter].messages" :key="i" :class="text.status">
                                         <p class="m-0">{{text.message}}</p>
