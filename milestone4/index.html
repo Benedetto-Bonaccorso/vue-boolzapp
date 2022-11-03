@@ -53,15 +53,17 @@
                                 <input type="text" class="w-100 contact-searchbar" placeholder="search or start a new chat" v-model="input">
                             </div>
 
-                                <div v-for="(contact, i) in contacts" :key="i" v-on:click="counter = i" :id="'contact' + i" class="list-unstyled d-flex align-items-center p-2">
+                                <div v-for="(contact, i) in contacts" :key="i" v-on:click="counter = i" :id="'contact' + i" class="">
 
-                                    <img class="contact-image" :src="source + 'avatar' + contact.avatar +'.jpg'" :alt="contact.name">
-
-                                    <div class="contact-name">
-                                        <div class="fs-6 d-flex justify-content-between">
-                                            <div>{{contact.name}}</div> 
-                                        </div> 
-                                        <div class="last-online text-muted">last online: {{contact.messages[contact.messages.length - 1].date.slice(-8,-3)}}</div>
+                                    <div v-if="contact.name.toLowerCase().includes(input.toLowerCase())" class="filtering d-flex align-items-center p-2">
+                                        <img class="contact-image" :src="source + 'avatar' + contact.avatar +'.jpg'" :alt="contact.name">
+                                    
+                                        <div class="contact-name">
+                                            <div class="fs-6 d-flex justify-content-between">
+                                                <div>{{contact.name}}</div> 
+                                            </div> 
+                                            <div class="last-online text-muted">last online: {{contact.messages[contact.messages.length - 1].date.slice(-8,-3)}}</div>
+                                        </div>
                                     </div>
                                 </div>
                         </div>

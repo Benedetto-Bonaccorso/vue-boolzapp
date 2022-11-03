@@ -1,7 +1,7 @@
 const { createApp } = Vue
 
+
 createApp({
-    
   data() {
     return {
         source: "./assets/img/",
@@ -171,11 +171,11 @@ createApp({
             }
         ],
         input: "",
+        filteredContacts: this.contacts
     }
   }, 
   methods:{
     sendMessage(){
-
         let currentTime = String(new Date().getDay()) + "/" + String(new Date().getMonth()) + "/" + String(new Date().getFullYear()) + " " + String(new Date().getHours()) + ":" + String(new Date().getMinutes()) + ":" + String(new Date().getSeconds())
 
         let standardAnswer = "YAAAAAS QUEEEEEEEN"
@@ -203,4 +203,3 @@ createApp({
   }
 
 }).mount('#app')
-
