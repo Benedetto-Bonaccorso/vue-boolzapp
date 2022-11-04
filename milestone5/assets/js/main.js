@@ -191,11 +191,12 @@ createApp({
 
         console.log(currentTime)
 
-        let standardAnswer = "YAAAAAS QUEEEEEEEN"
+        let standardAnswer = "a"//["See you in space, cowboy", "ok", "sure", "Bing Chilling"]
+        
 
         if(/\S/.test(this.newMessage)){
         this.contacts[this.counter].messages.push({
-            date: currentTime.year,
+            date: currentTime,
             message: this.newMessage,
             status: "sent"
         })
