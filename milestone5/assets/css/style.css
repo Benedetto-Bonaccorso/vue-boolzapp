@@ -137,11 +137,14 @@ body{
     background-color: aliceblue;
 }
 
+/*
 .received>.scroll-down-menu{
     display: none;
 }
+*/
 
-.sent:not(:hover)>.scroll-down-menu{
+.sent:not(:hover)>.scroll-down-menu,
+.received:not(:hover)>.scroll-down-menu{
     display: none;
 }
 

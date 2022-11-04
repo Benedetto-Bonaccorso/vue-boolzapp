@@ -171,7 +171,6 @@ createApp({
             }
         ],
         input: "",
-        filteredContacts: this.contacts
     }
   }, 
   methods:{
