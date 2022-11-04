@@ -191,7 +191,9 @@ createApp({
 
         console.log(currentTime)
 
-        let standardAnswer = "a"//["See you in space, cowboy", "ok", "sure", "Bing Chilling"]
+        let standardAnswer = ["See you in space, cowboy", "ok", "sure", "Bing Chilling"]
+
+        let answerRNG = Math.floor(Math.random()*standardAnswer.length)
         
 
         if(/\S/.test(this.newMessage)){
@@ -208,7 +210,7 @@ createApp({
                 this.contacts[this.counter].messages.push(
                     {
                         date: currentTime,
-                        message: standardAnswer,
+                        message: standardAnswer[answerRNG],
                         status: "received"
                     }
                 )
