@@ -200,6 +200,7 @@ createApp({
 
         this.newMessage = ""
 
+        if(counter !=8){
             setTimeout(() => {
                 this.contacts[this.counter].messages.push(
                     {
@@ -208,7 +209,7 @@ createApp({
                         status: "received"
                     }
                 )
-            }, 1000);
+            }, 1000);}
         }
     },
     messageCancel(i){
