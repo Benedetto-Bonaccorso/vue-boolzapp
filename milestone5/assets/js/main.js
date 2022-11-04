@@ -5,7 +5,7 @@ createApp({
   data() {
     return {
         source: "./assets/img/",
-        counter: 0,
+        counter: 8,
         newMessage: "",
         contacts: [
             {
@@ -165,6 +165,18 @@ createApp({
                     {
                         date: '10/01/2020 15:51:00',
                         message: 'OK!!',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Whatsapp',
+                avatar: '_9',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 20:20:20',
+                        message: 'Welcome to whatsapp, please select a contact',
                         status: 'received'
                     }
                 ],
