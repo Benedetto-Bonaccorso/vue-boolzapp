@@ -191,7 +191,7 @@ createApp({
 
         let standardAnswer = "YAAAAAS QUEEEEEEEN"
 
-        if(this.newMessage.length > 0){
+        if(/\S/.test(this.newMessage)){
         this.contacts[this.counter].messages.push({
             date: currentTime,
             message: this.newMessage,
