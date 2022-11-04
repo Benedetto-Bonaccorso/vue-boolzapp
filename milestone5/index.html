@@ -17,6 +17,7 @@
             <div class="background position-relative">
 
                 <div class="green-band">
+
                 </div>
 
                 <div class="app-wrapper w-75 position-absolute container-fluid">
@@ -52,7 +53,7 @@
                                 <input type="text" class="w-100 contact-searchbar" placeholder="search or start a new chat" v-model="input">
                             </div>
 
-                                <div v-for="(contact, i) in contacts" :key="i" v-on:click="counter = i" :id="'contact' + i" class="">
+                                <div v-for="(contact, i) in contacts.slice(0,-1)" :key="i" v-on:click="counter = i" :id="'contact' + i" class="">
 
                                     <div v-if="contact.name.toLowerCase().includes(input.toLowerCase())" class="filtering d-flex align-items-center p-2">
                                         <img class="contact-image" :src="source + 'avatar' + contact.avatar +'.jpg'" :alt="contact.name">

@@ -138,6 +138,8 @@ body{
 }
 
 /*
+
+// per togliere la possibilità di cancellare i messaggi altrui
 .received>.scroll-down-menu{
     display: none;
 }

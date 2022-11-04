@@ -189,18 +189,20 @@ createApp({
     sendMessage(){
         let currentTime = String(new Date().getDay()) + "/" + String(new Date().getMonth()) + "/" + String(new Date().getFullYear()) + " " + String(new Date().getHours()) + ":" + String(new Date().getMinutes()) + ":" + String(new Date().getSeconds())
 
+        console.log(currentTime)
+
         let standardAnswer = "YAAAAAS QUEEEEEEEN"
 
         if(/\S/.test(this.newMessage)){
         this.contacts[this.counter].messages.push({
-            date: currentTime,
+            date: currentTime.year,
             message: this.newMessage,
             status: "sent"
         })
 
         this.newMessage = ""
 
-        if(counter !=8){
+        if(this.counter !=8){
             setTimeout(() => {
                 this.contacts[this.counter].messages.push(
                     {
